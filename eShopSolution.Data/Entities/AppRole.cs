@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace eShopSolution.Data.Entities
 {
-    public class AppTole : IdentityRole<Guid>
+    public class AppRole : IdentityRole<Guid>
     {
         public string Description { get; set; }
     }
