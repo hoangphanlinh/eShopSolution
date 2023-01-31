@@ -10,7 +10,7 @@ using eShopSolution.Data.Extensions;
 
 namespace eShopSolution.Data.EF
 {
-    class eShopDbContext : DbContext
+    class eShopDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
         public eShopDbContext(DbContextOptions options) : base(options)
         {
@@ -47,7 +47,7 @@ namespace eShopSolution.Data.EF
             modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("AppUserTokens").HasKey(x => x.UserId);
 
             //Data seeding
-            //modelBuilder.Seed();
+            modelBuilder.Seed();
             //base.OnModelCreating(modelBuilder);
         }
 
