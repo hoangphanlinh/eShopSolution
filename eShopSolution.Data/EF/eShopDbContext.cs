@@ -10,7 +10,7 @@ using eShopSolution.Data.Extensions;
 
 namespace eShopSolution.Data.EF
 {
-    class eShopDbContext : DbContext
+    class eShopDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
         public eShopDbContext(DbContextOptions options) : base(options)
         {
